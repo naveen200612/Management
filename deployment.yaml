@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: event-manager-deployment
+  labels:
+    app: event-manager
+spec:
+  replicas: 3
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  selector:
+    matchLabels:
+      app: event-manager
+  template:
+    metadata:
+      labels:
+        app: event-manager
+    spec:
+      containers:
+      - name: event-manager-container
+        image: your-dockerhub-username/event-manager:latest
+        ports:
+        - containerPort: 80
+        imagePullPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: event-manager-service
+spec:
+  type: NodePort
+  selector:
+    app: event-manager
+  ports:
+    - port: 80
+      targetPort: 80
+      nodePort: 32000
