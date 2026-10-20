@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: event-manager-deployment
+  name: event-manager
   labels:
     app: event-manager
 spec:
