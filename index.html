@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Event Management Portal</title>
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --secondary: #0d9488;
+            --dark: #1f2937;
+            --light: #f3f4f6;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0; padding: 0;
+            background-color: var(--light);
+            color: var(--dark);
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white; text-align: center; padding: 2rem 1rem;
+        }
+        nav {
+            background-color: var(--dark);
+            display: flex; justify-content: center; gap: 20px; padding: 10px;
+        }
+        nav a { color: white; text-decoration: none; font-weight: bold; }
+        .container { max-width: 1000px; margin: 20px auto; padding: 0 20px; }
+        .card {
+            background: white; padding: 20px; border-radius: 8px;
+            margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .event-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px; margin-top: 15px;
+        }
+        .event-card { border: 1px solid #e5e7eb; padding: 15px; border-radius: 6px; background-color: #fafafa; }
+        .btn { background-color: var(--secondary); color: white; border: none; padding: 10px 15px; border-radius: 4px; cursor: pointer; }
+        .btn:hover { opacity: 0.9; }
+        .version-banner { padding: 10px; border-radius: 4px; font-weight: bold; text-align: center; margin-bottom: 15px; }
+        .functional { background-color: #d1fae5; color: #065f46; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CampusEvent Pro</h1>
+        <p>Technical Symposiums, Hackathons, Workshops & Cultural Festivals</p>
+    </header>
+    <nav>
+        <a href="#events">Upcoming Events</a>
+        <a href="#register">Registration Status</a>
+        <a href="#placement">Placement Updates</a>
+    </nav>
+    <main class="container">
+        <div class="version-banner functional">Status: Live & Stable (v1.0.0)</div>
+        <section id="events" class="card">
+            <h2>Upcoming Campus Events</h2>
+            <div class="event-grid">
+                <div class="event-card">
+                    <h3>Hack-A-Thon 2026</h3>
+                    <p><strong>Date:</strong> Nov 12, 2026</p>
+                    <p><strong>Venue:</strong> Main Seminar Hall</p>
+                    <p><strong>Limits:</strong> 50 Teams Max</p>
+                    <button class="btn">Register Now</button>
+                </div>
+                <div class="event-card">
+                    <h3>AI & Robotics Workshop</h3>
+                    <p><strong>Date:</strong> Nov 18, 2026</p>
+                    <p><strong>Venue:</strong> Tech Lab 3</p>
+                    <p><strong>Limits:</strong> 120 Attendees</p>
+                    <button class="btn">Register Now</button>
+                </div>
+            </div>
+        </section>
+        <section id="placement" class="card">
+            <h2>Placement & Career Opportunities</h2>
+            <ul id="job-list">
+                <li><strong>Google</strong> - Software Engineering Intern (Applications Open)</li>
+                <li><strong>Microsoft</strong> - Data Analyst Associate (Closes Soon)</li>
+            </ul>
+        </section>
+    </main>
+    <footer><p style="text-align: center;">&copy; 2026 College Event Management Cell.</p></footer>
+</body>
+</html>
