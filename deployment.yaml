@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: event-manager-container
-        image: your-dockerhub-username/event-manager:latest
+        image: naveen200612/event-manager:latest
         ports:
         - containerPort: 80
         imagePullPolicy: Always
